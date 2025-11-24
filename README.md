@@ -1,4 +1,3 @@
-<div align="center">
 
 # 🍳 FlavourAI API
 
@@ -16,7 +15,6 @@
 [Przykłady](#-przykłady-użycia) •
 [Architektura](#-architektura)
 
-</div>
 
 ---
 
