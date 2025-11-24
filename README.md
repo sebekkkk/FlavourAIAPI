@@ -792,68 +792,6 @@ body('password').isLength({ min: 8 }).matches(/[A-Z]/).matches(/[0-9]/)
   timestamps: true
 }
 ```
-
----
-
-## 🚀 Deployment
-
-### Railway / Render
-
-1. **Utwórz projekt** na Railway.app lub Render.com
-
-2. **Dodaj zmienne środowiskowe** w panelu
-
-3. **Deploy z GitHub**
-```bash
-# Railway automatycznie wykryje Node.js i uruchomi npm start
-```
-
-4. **Skonfiguruj zewnętrzne usługi**
-   - MongoDB Atlas (darmowy tier)
-   - Redis Cloud (darmowy tier)
-
----
-
-### Docker (opcjonalne)
-
-```dockerfile
-FROM node:18-alpine
-
-WORKDIR /app
-
-COPY package*.json ./
-RUN npm ci --only=production
-
-COPY . .
-
-EXPOSE 3000
-
-CMD ["node", "server.js"]
-```
-
-```bash
-# Build
-docker build -t flavouraiapi .
-
-# Run
-docker run -p 3000:3000 --env-file .env flavouraiapi
-```
-
----
-
-## 🧪 Testowanie
-
-```bash
-# Uruchom testy jednostkowe
-npm test
-
-# Testy integracyjne
-npm run test:integration
-
-# Coverage report
-npm run test:coverage
-```
-
 ---
 
 ## 🐛 Znane problemy i rozwiązania
@@ -890,26 +828,6 @@ redis-cli ping  # Powinno zwrócić PONG
 
 ---
 
-## 🤝 Kontrbucja
-
-Zapraszamy do kontrybucji! Aby wnieść swój wkład:
-
-1. **Fork** repozytorium
-2. **Stwórz** branch dla swojej funkcji (`git checkout -b feature/AmazingFeature`)
-3. **Commit** zmiany (`git commit -m 'Add some AmazingFeature'`)
-4. **Push** do brancha (`git push origin feature/AmazingFeature`)
-5. **Otwórz** Pull Request
-
-### Standardy kodu
-
-- Używaj ES6+ syntax
-- Stosuj się do konwencji nazewnictwa
-- Dodaj komentarze dla skomplikowanej logiki
-- Waliduj wszystkie dane wejściowe
-- Pisz testy dla nowych funkcji
-
----
-
 ## 📝 Changelog
 
 ### [1.0.0] - 2025-11-24
@@ -927,22 +845,24 @@ Zapraszamy do kontrybucji! Aby wnieść swój wkład:
 
 ## 📄 Licencja
 
-Ten projekt jest dostępny na licencji MIT License.
+Ten projekt jest dostępny na licencji ISC License.
 
 ```
-MIT License
+ISC License
 
 Copyright (c) 2025 sebekkkk
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 ```
 
 ---
@@ -953,16 +873,6 @@ copies or substantial portions of the Software.
 
 - GitHub: [@sebekkkk](https://github.com/sebekkkk)
 - Repository: [FlavourAIAPI](https://github.com/sebekkkk/FlavourAIAPI)
-
----
-
-## 🙏 Podziękowania
-
-- [Google Gemini AI](https://deepmind.google/technologies/gemini/) - Model AI do generowania przepisów
-- [Express.js Community](https://expressjs.com/) - Świetny framework
-- [MongoDB](https://www.mongodb.com/) - Elastyczna baza danych
-- [Redis](https://redis.io/) - Wydajny cache
-- Wszyscy kontrybutorzy i użytkownicy projektu ❤️
 
 ---
 
